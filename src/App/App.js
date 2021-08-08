@@ -2,6 +2,7 @@
 import React, { useState, useReducer, useMemo } from 'react';
 import Solution from '../Solution/Solution'
 import Input from '../Input/Input'
+import Language from '../Language/Language'
 import { defaultHeirs, calculate } from '@hu-bcs1/islamic-inheritance-calculator'
 
 import Fab from '@material/react-fab'
@@ -32,6 +33,7 @@ const App = () => {
   return (
     <>
       <header className="App-header">
+        <Language />
         <p className="App-name">{t('title')}</p>
       </header>
       <main className="App-main" dir={t('lang') === 'en' ? 'ltr' : 'rtl'}>
