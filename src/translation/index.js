@@ -4,6 +4,7 @@ import React, { createContext, useContext } from 'react'
 import en from './translation-en.json'
 import ar from './translation-ar.json'
 import fa from './translation-fa.json'
+import ps from './translation-ps.json'
 
 const translate = lang => key => {
   // lang === 'en' ? en[key] : ar[key]
@@ -14,6 +15,8 @@ const translate = lang => key => {
       return ar[key];
     case 'fa':
       return fa[key];
+    case 'ps':
+      return ps[key];
     default:
       return fa[key];
   }
