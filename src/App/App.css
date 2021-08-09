@@ -1,9 +1,9 @@
 .App-header {
+  padding: 0 84px;
   height: 86px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 24px;
   background: #e6e4c7;
   box-shadow: 0 4px 6px rgba(230, 228, 199, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }

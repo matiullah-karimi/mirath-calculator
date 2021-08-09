@@ -2,15 +2,37 @@ import React from 'react'
 import './Language.css';
 
 const Language = () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const lang = urlParams.get('lang');
+
     return (<div className="nav-wrapper">
         <div className="sl-nav">
-            Sprache:
             <ul>
-                <li><b>Deutsch</b> <i className="fa fa-angle-down" aria-hidden="true"></i>
+                <li>
+                    <img src="/global.svg" alt="language" width="20"/>
+                    <i className="fa fa-angle-down" aria-hidden="true"></i>
                     <div className="triangle"></div>
                     <ul>
-                        <li><i className="sl-flag flag-de"><div id="germany"></div></i> <span className="active">Deutsch</span></li>
-                        <li><i className="sl-flag flag-usa"><div id="germany"></div></i> <span>Englisch</span></li>
+                        <li>
+                            <a className={lang === 'fa' ? 'active' : ''} href="/?lang=fa">
+                                دری
+                            </a>
+                        </li>
+                        <li>
+                            <a className={lang === 'ps' ? 'active' : ''} href="/?lang=ps">
+                                پشتو
+                            </a>
+                        </li>
+                        <li>
+                            <a className={lang === 'ar' ? 'active' : ''} href="/?lang=ar">
+                                عربی
+                            </a>
+                        </li>
+                        <li>
+                            <a className={lang === 'en' ? 'active' : ''} href="/?lang=en">
+                                English
+                            </a>
+                        </li>
                     </ul>
                 </li>
             </ul>

@@ -6,9 +6,11 @@ import * as serviceWorker from './serviceWorker';
 
 import { TranslationProvider } from './translation'
 
-//TODO: read lang from url params
+const urlParams = new URLSearchParams(window.location.search);
+const lang = urlParams.get('lang');
+
 ReactDOM.render(
-  <TranslationProvider lang='fa'>
+  <TranslationProvider lang={lang}>
     <App />
   </TranslationProvider>,
   document.getElementById('root')

@@ -8,6 +8,8 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Islamic Inheritance Calculator">
+    <meta name="keywords" content="mirath, almawarith, islamic inheritance calculator, islamic inheritance, میراث, محاسبه میراث">
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -38,4 +40,26 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const lang = urlParams.get('lang');
+
+    switch (lang) {
+    case 'en':
+      document.title = 'Islamic Inheritance Calculator';
+      break;
+    case 'ar':
+      document.title = "حاسبة الميراث الإسلامي";
+      break;
+    case 'fa':
+      document.title = "محاسبه میراث اسلامی";
+      break;
+    case 'ps':
+      document.title = "د اسلامی میراث محاسبه";
+      break;
+    default:
+      document.title = "محاسبه میراث اسلامی";
+  }
+  </script>
 </html>
